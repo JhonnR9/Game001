@@ -1,7 +1,6 @@
 import GameConstants.Companion.dimension
 import java.awt.Canvas
 import java.awt.Color
-import java.awt.Dimension
 import java.awt.Graphics
 import java.awt.image.BufferStrategy
 import java.awt.image.BufferedImage
@@ -27,6 +26,7 @@ class Window : Canvas() {
         jFrame.setLocationRelativeTo(null)
 
     }
+
     private fun clearScreen(g: Graphics) {
         graphics.color = Color.GRAY
         graphics.fillRect(0, 0, width, height)
@@ -51,7 +51,8 @@ class Window : Canvas() {
         clearScreen(g)
         //render yours objects here
 
-
+        g.color = Color.blue
+        g.fillRect(50, 50, 64, 64)
 
 
         //***//
